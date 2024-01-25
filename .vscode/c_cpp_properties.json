@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}"
+            },
+            "includePath": [
+                "${workspaceFolder}/csrc/**",
+                "/usr/include/**",
+                "/usr/local/include/**",
+                "/usr/local/cuda/include/**"
+            ],
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "name": "onnx_sandbox"
+        }
+    ],
+    "version": 4
+}

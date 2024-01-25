@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "onnx-sandbox"
+version = "0.1.0"
+description = ""
+authors = ["ktro2828 <kotaro.uetake@tier4.jp>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "2.1.1"
+onnx = "^1.15.0"
+onnxscript = "^0.1.0.dev20240125"
+numpy = "^1.26.3"
+onnxruntime-gpu = "^1.16.3"
+opencv-python = "^4.9.0.80"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+
+[build-system]
+requires = ["poetry-core", "setuptools", "torch==2.1.1", "numpy"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
