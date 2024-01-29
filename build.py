@@ -21,10 +21,20 @@ def make_cuda_ext(
 def build(setup_kwargs: dict) -> None:
     ext_modules = [
         make_cuda_ext(
-            name="my_ops",
-            module="csrc.my_ops",
+            name="my_func",
+            module="csrc.my_func",
             sources=["add.cpp"],
-        )
+        ),
+        make_cuda_ext(
+            name="my_autograd",
+            module="csrc.my_autograd",
+            sources=[
+                "attention_kernel.cpp",
+                "attention_value_kernel.cu",
+                "attention_weight_kernel.cu",
+                "my_attention.cpp",
+            ],
+        ),
     ]
 
     setup_kwargs.update(

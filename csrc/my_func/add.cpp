@@ -1,6 +1,6 @@
 #include <torch/extension.h>
 
-namespace my_ops
+namespace my_func
 {
 torch::Tensor add(const torch::Tensor & t1_, const torch::Tensor & t2_)
 {
@@ -16,9 +16,9 @@ torch::Tensor add(const torch::Tensor & t1_, const torch::Tensor & t2_)
   return result;
 }
 
-TORCH_LIBRARY(my_ops, m)
+TORCH_LIBRARY(my_func, m)
 {
   m.def("add", add);
 }
 
-}  // namespace my_ops
+}  // namespace my_func

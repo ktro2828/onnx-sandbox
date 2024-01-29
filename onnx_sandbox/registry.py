@@ -1,4 +1,3 @@
-import onnxruntime
 import onnxscript
 import torch
 from onnxscript import opset18
